@@ -1,4 +1,4 @@
-"use strict";
+// models/user.js
 const { Model, DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -30,6 +30,15 @@ module.exports = (sequelize) => {
       role: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      is_verified: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+      },
+      verification_code: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
     },
     {

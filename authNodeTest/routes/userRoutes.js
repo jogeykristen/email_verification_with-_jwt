@@ -6,6 +6,7 @@ const authenticateUser = require("../middleware/authentication");
 
 // Define user routes
 router.post("/createuser", userController.createUser);
+router.post("/verify", userController.verify);
 router.post("/login", userController.login);
 router.post("/delete", authenticateUser, userController.deleteUser);
 router.post("/update", userController.updateUser);
